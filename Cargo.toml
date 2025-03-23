@@ -110,5 +110,5 @@ candle-onnx = ["dep:candle-onnx"]
 #depth_anything_v2 = ["palette", "enterpolation"]
 
 [build-dependencies]
-#anyhow = {  }
+anyhow = { features = ["backtrace"] }
 bindgen_cuda = { version = "0.1.1", optional = true }

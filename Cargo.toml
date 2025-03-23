@@ -102,7 +102,7 @@ candle-onnx = { path = "../../rust/candle/candle-onnx", optional = true }
 
 poem-openapi = "5.1.5"
 #noisegen = { version = "0.1.0", path = "../noisegen" }
-noisegen = {git = "https://github.com/aifx-art/noisegen.git" }
+#noisegen = {git = "https://github.com/aifx-art/noisegen.git" }
 memmap2 = "0.9.4"
 
 

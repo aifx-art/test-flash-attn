@@ -651,23 +651,6 @@ dependencies = [
 [[package]]
 name = "candle-transformers"
 version = "0.8.4"
-dependencies = [
- "byteorder",
- "candle-core 0.8.4",
- "candle-nn 0.8.4",
- "fancy-regex",
- "num-traits",
- "rand 0.9.0",
- "rayon",
- "serde",
- "serde_json",
- "serde_plain",
- "tracing",
-]
-
-[[package]]
-name = "candle-transformers"
-version = "0.8.4"
 source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
 dependencies = [
  "accelerate-src",
@@ -3598,19 +3581,6 @@ name = "nodrop"
 version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "72ef4a56884ca558e5ddb05a1d1e7e1bfd9a68d9ed024c21704cc98872dae1bb"
-
-[[package]]
-name = "noisegen"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "candle-core 0.8.4",
- "candle-nn 0.8.4",
- "candle-transformers 0.8.4",
- "image",
- "rand 0.9.0",
- "rand_distr 0.5.1",
-]
 
 [[package]]
 name = "nom"
@@ -6652,7 +6622,7 @@ dependencies = [
  "candle-flash-attn",
  "candle-nn 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-onnx",
- "candle-transformers 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
+ "candle-transformers",
  "chrono",
  "clap",
  "cpal",
@@ -6667,7 +6637,6 @@ dependencies = [
  "intel-mkl-src",
  "itertools 0.14.0",
  "memmap2",
- "noisegen",
  "num-traits",
  "once_cell",
  "palette",

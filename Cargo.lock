@@ -533,6 +533,27 @@ dependencies = [
 name = "candle-core"
 version = "0.8.4"
 dependencies = [
+ "byteorder",
+ "gemm 0.17.1",
+ "half",
+ "memmap2",
+ "num-traits",
+ "num_cpus",
+ "rand 0.9.0",
+ "rand_distr 0.5.1",
+ "rayon",
+ "safetensors",
+ "thiserror 1.0.69",
+ "ug",
+ "yoke",
+ "zip",
+]
+
+[[package]]
+name = "candle-core"
+version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
+dependencies = [
  "accelerate-src",
  "byteorder",
  "candle-kernels",
@@ -560,16 +581,18 @@ dependencies = [
 [[package]]
 name = "candle-flash-attn"
 version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
 dependencies = [
  "anyhow",
  "bindgen_cuda",
- "candle-core",
+ "candle-core 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "half",
 ]
 
 [[package]]
 name = "candle-kernels"
 version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
 dependencies = [
  "bindgen_cuda",
 ]
@@ -577,6 +600,7 @@ dependencies = [
 [[package]]
 name = "candle-metal-kernels"
 version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
 dependencies = [
  "metal 0.27.0",
  "once_cell",
@@ -588,8 +612,22 @@ dependencies = [
 name = "candle-nn"
 version = "0.8.4"
 dependencies = [
+ "candle-core 0.8.4",
+ "half",
+ "num-traits",
+ "rayon",
+ "safetensors",
+ "serde",
+ "thiserror 1.0.69",
+]
+
+[[package]]
+name = "candle-nn"
+version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
+dependencies = [
  "accelerate-src",
- "candle-core",
+ "candle-core 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-metal-kernels",
  "half",
  "metal 0.27.0",
@@ -604,8 +642,8 @@ dependencies = [
 name = "candle-onnx"
 version = "0.8.4"
 dependencies = [
- "candle-core",
- "candle-nn",
+ "candle-core 0.8.4",
+ "candle-nn 0.8.4",
  "prost",
  "prost-build",
 ]
@@ -614,11 +652,29 @@ dependencies = [
 name = "candle-transformers"
 version = "0.8.4"
 dependencies = [
+ "byteorder",
+ "candle-core 0.8.4",
+ "candle-nn 0.8.4",
+ "fancy-regex",
+ "num-traits",
+ "rand 0.9.0",
+ "rayon",
+ "serde",
+ "serde_json",
+ "serde_plain",
+ "tracing",
+]
+
+[[package]]
+name = "candle-transformers"
+version = "0.8.4"
+source = "git+https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa041c3d5fbc2ddcef990b18a6f368fa07a8"
+dependencies = [
  "accelerate-src",
  "byteorder",
- "candle-core",
+ "candle-core 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-flash-attn",
- "candle-nn",
+ "candle-nn 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "fancy-regex",
  "num-traits",
  "rand 0.9.0",
@@ -3548,9 +3604,9 @@ name = "noisegen"
 version = "0.1.0"
 dependencies = [
  "anyhow",
- "candle-core",
- "candle-nn",
- "candle-transformers",
+ "candle-core 0.8.4",
+ "candle-nn 0.8.4",
+ "candle-transformers 0.8.4",
  "image",
  "rand 0.9.0",
  "rand_distr 0.5.1",
@@ -6592,11 +6648,11 @@ dependencies = [
  "bincode",
  "bindgen_cuda",
  "byteorder",
- "candle-core",
+ "candle-core 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-flash-attn",
- "candle-nn",
+ "candle-nn 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-onnx",
- "candle-transformers",
+ "candle-transformers 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "chrono",
  "clap",
  "cpal",

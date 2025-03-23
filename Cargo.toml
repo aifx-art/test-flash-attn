@@ -116,7 +116,7 @@ rand = "0.9.0"
 #tokio = "1.29.1"
 tokio = "1.40.0"
 
-noisegen = { path = "../noisegen" }
+#noisegen = { path = "../noisegen" }
 
 [features]
 default = []

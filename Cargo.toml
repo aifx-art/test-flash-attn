@@ -53,11 +53,17 @@ accelerate-src = { version = "0.3.2", optional = true }
 #[target.'cfg(not(target_os = "ios"))'.dependencies]
 
 # LOCAL
-candle-core = { path = "../../rust/candle/candle-core" }
+#candle-core = { path = "../../rust/candle/candle-core" }
 #candle-datasets = { path = "../candle/candle-datasets", optional = true }
-candle-nn = { path = "../../rust/candle/candle-nn" }
-candle-transformers = { path = "../../rust/candle/candle-transformers" }
-candle-flash-attn = { path = "../../rust/candle/candle-flash-attn", optional = true }
+#andle-nn = { path = "../../rust/candle/candle-nn" }
+#candle-transformers = { path = "../../rust/candle/candle-transformers" }
+#candle-flash-attn = { path = "../../rust/candle/candle-flash-attn", optional = true }
+
+candle-core = { git = "https://github.com/xkeyC/candle.git", branch = "fl_caption_build" }
+candle-nn = { git = "https://github.com/xkeyC/candle.git", branch = "fl_caption_build" }
+candle-transformers = { git = "https://github.com/xkeyC/candle.git", branch = "fl_caption_build" }
+candle-flash-attn = { git = "https://github.com/xkeyC/candle.git", branch = "fl_caption_build", optional = true}
+
 candle-onnx = { path = "../../rust/candle/candle-onnx", optional = true }
 
 # AIFX ART 

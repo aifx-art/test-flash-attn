@@ -1502,6 +1502,7 @@ name = "test-candle"
 version = "0.1.0"
 dependencies = [
  "accelerate-src",
+ "anyhow",
  "bindgen_cuda",
  "candle-core 0.8.4 (git+https://github.com/xkeyC/candle.git?branch=fl_caption_build)",
  "candle-flash-attn",

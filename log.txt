@@ -1,0 +1,1054 @@
+error: failed to run custom build command for `candle-flash-attn v0.8.4 (https://github.com/xkeyC/candle.git?branch=fl_caption_build#015eaa04)`
+
+Caused by:
+  process didn't exit successfully: `/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-1a01f3b8658ebf5f/build-script-build` (exit status: 101)
+  --- stdout
+  cargo:rerun-if-changed=build.rs
+  cargo:rerun-if-changed=kernels/flash_api.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim128_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim160_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim192_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim224_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim256_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim32_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim64_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim96_fp16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim128_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim160_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim192_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim224_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim256_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim32_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim64_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim96_bf16_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim128_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim160_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim192_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim224_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim256_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim32_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim64_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim96_fp16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim128_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim160_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim192_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim224_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim256_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim32_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim64_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_hdim96_bf16_causal_sm80.cu
+  cargo:rerun-if-changed=kernels/flash_fwd_kernel.h
+  cargo:rerun-if-changed=kernels/flash_fwd_launch_template.h
+  cargo:rerun-if-changed=kernels/flash.h
+  cargo:rerun-if-changed=kernels/philox.cuh
+  cargo:rerun-if-changed=kernels/softmax.h
+  cargo:rerun-if-changed=kernels/utils.h
+  cargo:rerun-if-changed=kernels/kernel_traits.h
+  cargo:rerun-if-changed=kernels/block_info.h
+  cargo:rerun-if-changed=kernels/static_switch.h
+  cargo:rerun-if-changed=kernels/hardware_info.h
+  cargo:info=["/usr", "/usr/local/cuda", "/opt/cuda", "/usr/lib/cuda", "C:/Program Files/NVIDIA GPU Computing Toolkit", "C:/CUDA"]
+  cargo:rerun-if-env-changed=CUDA_COMPUTE_CAP
+  cargo:rustc-env=CUDA_COMPUTE_CAP=80
+
+  --- stderr
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000919c9_00000000-5_flash_fwd_hdim32_bf16_causal_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_bf16_sm80.cu" -o "/tmp/tmpxft_000919c5_00000000-5_flash_fwd_hdim96_bf16_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_api.cu" -o "/tmp/tmpxft_000919c4_00000000-5_flash_api.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_fp16_sm80.cu" -o "/tmp/tmpxft_000919c6_00000000-5_flash_fwd_hdim96_fp16_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000919c7_00000000-5_flash_fwd_hdim96_fp16_causal_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000919c8_00000000-5_flash_fwd_hdim224_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c9_00000000-4_flash_fwd_hdim32_bf16_causal_sm80.module_id" "/tmp/tmpxft_000919c9_00000000-5_flash_fwd_hdim32_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c8_00000000-4_flash_fwd_hdim224_bf16_causal_sm80.module_id" "/tmp/tmpxft_000919c8_00000000-5_flash_fwd_hdim224_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c7_00000000-4_flash_fwd_hdim96_fp16_causal_sm80.module_id" "/tmp/tmpxft_000919c7_00000000-5_flash_fwd_hdim96_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c6_00000000-4_flash_fwd_hdim96_fp16_sm80.module_id" "/tmp/tmpxft_000919c6_00000000-5_flash_fwd_hdim96_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c5_00000000-4_flash_fwd_hdim96_bf16_sm80.module_id" "/tmp/tmpxft_000919c5_00000000-5_flash_fwd_hdim96_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_api.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_api.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000919c4_00000000-6_flash_api.cudafe1.cpp" --stub_file_name "tmpxft_000919c4_00000000-6_flash_api.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000919c4_00000000-4_flash_api.module_id" "/tmp/tmpxft_000919c4_00000000-5_flash_api.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000919c8_00000000-7_flash_fwd_hdim224_bf16_causal_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000919c7_00000000-7_flash_fwd_hdim96_fp16_causal_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_api.cu" -o "/tmp/tmpxft_000919c4_00000000-7_flash_api.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_bf16_sm80.cu" -o "/tmp/tmpxft_000919c5_00000000-7_flash_fwd_hdim96_bf16_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000919c9_00000000-7_flash_fwd_hdim32_bf16_causal_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_fp16_sm80.cu" -o "/tmp/tmpxft_000919c6_00000000-7_flash_fwd_hdim96_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c8_00000000-3_flash_fwd_hdim224_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c8_00000000-4_flash_fwd_hdim224_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000919c8_00000000-7_flash_fwd_hdim224_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c7_00000000-3_flash_fwd_hdim96_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c7_00000000-4_flash_fwd_hdim96_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000919c7_00000000-7_flash_fwd_hdim96_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000919c7_00000000-6_flash_fwd_hdim96_fp16_causal_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_api.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_api.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c4_00000000-3_flash_api.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c4_00000000-4_flash_api.module_id" --gen_c_file_name "/tmp/tmpxft_000919c4_00000000-6_flash_api.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c4_00000000-6_flash_api.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c4_00000000-6_flash_api.cudafe1.gpu"  "/tmp/tmpxft_000919c4_00000000-7_flash_api.cpp1.ii" -o "/tmp/tmpxft_000919c4_00000000-6_flash_api.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c5_00000000-3_flash_fwd_hdim96_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c5_00000000-4_flash_fwd_hdim96_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000919c5_00000000-7_flash_fwd_hdim96_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_000919c5_00000000-6_flash_fwd_hdim96_bf16_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c9_00000000-3_flash_fwd_hdim32_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c9_00000000-4_flash_fwd_hdim32_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000919c9_00000000-7_flash_fwd_hdim32_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000919c6_00000000-3_flash_fwd_hdim96_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000919c6_00000000-4_flash_fwd_hdim96_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000919c6_00000000-7_flash_fwd_hdim96_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(318): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000919c4_00000000-6_flash_api.ptx"  -o "/tmp/tmpxft_000919c4_00000000-8_flash_api.sm_80.cubin" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000919c4_00000000-8_flash_api.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000919c4_00000000-6_flash_api.ptx" --embedded-fatbin="/tmp/tmpxft_000919c4_00000000-3_flash_api.fatbin.c" 
+  #$ rm /tmp/tmpxft_000919c4_00000000-3_flash_api.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000919c4_00000000-6_flash_api.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_api-59d12f2bec85f63.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_fp16_sm80.cu" -o "/tmp/tmpxft_00091bc0_00000000-5_flash_fwd_hdim128_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00091bc0_00000000-4_flash_fwd_hdim128_fp16_sm80.module_id" "/tmp/tmpxft_00091bc0_00000000-5_flash_fwd_hdim128_fp16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_fp16_sm80.cu" -o "/tmp/tmpxft_00091bc0_00000000-7_flash_fwd_hdim128_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00091bc0_00000000-3_flash_fwd_hdim128_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00091bc0_00000000-4_flash_fwd_hdim128_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00091bc0_00000000-7_flash_fwd_hdim128_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim96_fp16_causal_sm80-779d1cffdf403141.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim96_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00091e0e_00000000-5_flash_fwd_hdim128_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00091e0e_00000000-4_flash_fwd_hdim128_bf16_causal_sm80.module_id" "/tmp/tmpxft_00091e0e_00000000-5_flash_fwd_hdim128_bf16_causal_sm80.cpp4.ii" 
+  LLVM ERROR: out of memory
+  Aborted
+  # --error 0x86 --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim96_bf16_sm80-f51ba409eb93ce41.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim96_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00091e57_00000000-5_flash_fwd_hdim128_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00091e57_00000000-4_flash_fwd_hdim128_fp16_causal_sm80.module_id" "/tmp/tmpxft_00091e57_00000000-5_flash_fwd_hdim128_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00091e0e_00000000-7_flash_fwd_hdim128_bf16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00091e0e_00000000-3_flash_fwd_hdim128_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00091e0e_00000000-4_flash_fwd_hdim128_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00091e0e_00000000-7_flash_fwd_hdim128_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00091e0e_00000000-6_flash_fwd_hdim128_bf16_causal_sm80.ptx"
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00091e57_00000000-7_flash_fwd_hdim128_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00091e57_00000000-3_flash_fwd_hdim128_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00091e57_00000000-4_flash_fwd_hdim128_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00091e57_00000000-7_flash_fwd_hdim128_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00091e57_00000000-6_flash_fwd_hdim128_fp16_causal_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim128_bf16_causal_sm80-c4d513d0ee9df932.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim128_bf16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00092040_00000000-5_flash_fwd_hdim160_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092040_00000000-4_flash_fwd_hdim160_bf16_causal_sm80.module_id" "/tmp/tmpxft_00092040_00000000-5_flash_fwd_hdim160_bf16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00092040_00000000-7_flash_fwd_hdim160_bf16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092040_00000000-3_flash_fwd_hdim160_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092040_00000000-4_flash_fwd_hdim160_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092040_00000000-7_flash_fwd_hdim160_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00092040_00000000-6_flash_fwd_hdim160_bf16_causal_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim160_bf16_causal_sm80-73550644d4ad9876.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim160_bf16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" -o "/tmp/tmpxft_0009208b_00000000-5_flash_fwd_hdim192_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_0009208b_00000000-4_flash_fwd_hdim192_bf16_causal_sm80.module_id" "/tmp/tmpxft_0009208b_00000000-5_flash_fwd_hdim192_bf16_causal_sm80.cpp4.ii" 
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim128_fp16_causal_sm80-dbb82e436e479785.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim128_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092275_00000000-5_flash_fwd_hdim160_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092275_00000000-4_flash_fwd_hdim160_fp16_causal_sm80.module_id" "/tmp/tmpxft_00092275_00000000-5_flash_fwd_hdim160_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" -o "/tmp/tmpxft_0009208b_00000000-7_flash_fwd_hdim192_bf16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_0009208b_00000000-3_flash_fwd_hdim192_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_0009208b_00000000-4_flash_fwd_hdim192_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_0009208b_00000000-7_flash_fwd_hdim192_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.ptx"
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092275_00000000-7_flash_fwd_hdim160_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092275_00000000-3_flash_fwd_hdim160_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092275_00000000-4_flash_fwd_hdim160_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092275_00000000-7_flash_fwd_hdim160_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00092275_00000000-6_flash_fwd_hdim160_fp16_causal_sm80.ptx"
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.ptx"  -o "/tmp/tmpxft_000919c9_00000000-8_flash_fwd_hdim32_bf16_causal_sm80.sm_80.cubin" 
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim160_fp16_causal_sm80-6cbf447e139f4864.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim160_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000922cd_00000000-5_flash_fwd_hdim192_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000922cd_00000000-4_flash_fwd_hdim192_fp16_causal_sm80.module_id" "/tmp/tmpxft_000922cd_00000000-5_flash_fwd_hdim192_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000922cd_00000000-7_flash_fwd_hdim192_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000922cd_00000000-3_flash_fwd_hdim192_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000922cd_00000000-4_flash_fwd_hdim192_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000922cd_00000000-7_flash_fwd_hdim192_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000922cd_00000000-6_flash_fwd_hdim192_fp16_causal_sm80.ptx"
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000919c9_00000000-8_flash_fwd_hdim32_bf16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000919c9_00000000-3_flash_fwd_hdim32_bf16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000919c9_00000000-3_flash_fwd_hdim32_bf16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000919c9_00000000-6_flash_fwd_hdim32_bf16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim32_bf16_causal_sm80-33e8bd4d897a528a.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000922e1_00000000-5_flash_fwd_hdim64_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000922e1_00000000-4_flash_fwd_hdim64_bf16_causal_sm80.module_id" "/tmp/tmpxft_000922e1_00000000-5_flash_fwd_hdim64_bf16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000922e1_00000000-7_flash_fwd_hdim64_bf16_causal_sm80.cpp1.ii" 
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim192_fp16_causal_sm80-a9d9064e74e6f19a.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim192_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000922ec_00000000-5_flash_fwd_hdim224_fp16_causal_sm80.cpp4.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000922e1_00000000-3_flash_fwd_hdim64_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000922e1_00000000-4_flash_fwd_hdim64_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000922e1_00000000-7_flash_fwd_hdim64_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.ptx"
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000922ec_00000000-4_flash_fwd_hdim224_fp16_causal_sm80.module_id" "/tmp/tmpxft_000922ec_00000000-5_flash_fwd_hdim224_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" -o "/tmp/tmpxft_000922ec_00000000-7_flash_fwd_hdim224_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000922ec_00000000-3_flash_fwd_hdim224_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000922ec_00000000-4_flash_fwd_hdim224_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000922ec_00000000-7_flash_fwd_hdim224_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000922ec_00000000-6_flash_fwd_hdim224_fp16_causal_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(318): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.ptx"  -o "/tmp/tmpxft_000919c8_00000000-8_flash_fwd_hdim224_bf16_causal_sm80.sm_80.cubin" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.ptx"  -o "/tmp/tmpxft_000919c6_00000000-8_flash_fwd_hdim96_fp16_sm80.sm_80.cubin" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.ptx"  -o "/tmp/tmpxft_0009208b_00000000-8_flash_fwd_hdim192_bf16_causal_sm80.sm_80.cubin" 
+  <unnamed>: parse Explicit load/store type does not match pointee type of pointer operand (Producer: 'LLVM7.0.1' Reader: 'LLVM 7.0.1')
+  # --error 0x1 --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim224_fp16_causal_sm80-3c6932096a698281.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim224_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092313_00000000-5_flash_fwd_hdim256_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092313_00000000-4_flash_fwd_hdim256_fp16_causal_sm80.module_id" "/tmp/tmpxft_00092313_00000000-5_flash_fwd_hdim256_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092313_00000000-7_flash_fwd_hdim256_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092313_00000000-3_flash_fwd_hdim256_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092313_00000000-4_flash_fwd_hdim256_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092313_00000000-7_flash_fwd_hdim256_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(347): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000919c8_00000000-8_flash_fwd_hdim224_bf16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000919c8_00000000-3_flash_fwd_hdim224_bf16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000919c8_00000000-3_flash_fwd_hdim224_bf16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000919c8_00000000-6_flash_fwd_hdim224_bf16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim224_bf16_causal_sm80-d2e917c662c56f7.o" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_0009208b_00000000-8_flash_fwd_hdim192_bf16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_0009208b_00000000-3_flash_fwd_hdim192_bf16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_0009208b_00000000-3_flash_fwd_hdim192_bf16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_0009208b_00000000-6_flash_fwd_hdim192_bf16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim192_bf16_causal_sm80-9f403d15bf79e17a.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" -o "/tmp/tmpxft_0009232b_00000000-5_flash_fwd_hdim32_fp16_causal_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00092332_00000000-5_flash_fwd_hdim256_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_0009232b_00000000-4_flash_fwd_hdim32_fp16_causal_sm80.module_id" "/tmp/tmpxft_0009232b_00000000-5_flash_fwd_hdim32_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092332_00000000-4_flash_fwd_hdim256_bf16_causal_sm80.module_id" "/tmp/tmpxft_00092332_00000000-5_flash_fwd_hdim256_bf16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" -o "/tmp/tmpxft_0009232b_00000000-7_flash_fwd_hdim32_fp16_causal_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" -o "/tmp/tmpxft_00092332_00000000-7_flash_fwd_hdim256_bf16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_0009232b_00000000-3_flash_fwd_hdim32_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_0009232b_00000000-4_flash_fwd_hdim32_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_0009232b_00000000-7_flash_fwd_hdim32_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_0009232b_00000000-6_flash_fwd_hdim32_fp16_causal_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092332_00000000-3_flash_fwd_hdim256_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092332_00000000-4_flash_fwd_hdim256_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092332_00000000-7_flash_fwd_hdim256_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00092332_00000000-6_flash_fwd_hdim256_bf16_causal_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(347): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim32_fp16_causal_sm80-65912722d7db953d.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim32_fp16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092375_00000000-5_flash_fwd_hdim64_fp16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092375_00000000-4_flash_fwd_hdim64_fp16_causal_sm80.module_id" "/tmp/tmpxft_00092375_00000000-5_flash_fwd_hdim64_fp16_causal_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" -o "/tmp/tmpxft_00092375_00000000-7_flash_fwd_hdim64_fp16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_fp16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092375_00000000-3_flash_fwd_hdim64_fp16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092375_00000000-4_flash_fwd_hdim64_fp16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092375_00000000-7_flash_fwd_hdim64_fp16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.ptx"
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000919c6_00000000-8_flash_fwd_hdim96_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000919c6_00000000-3_flash_fwd_hdim96_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000919c6_00000000-3_flash_fwd_hdim96_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000919c6_00000000-6_flash_fwd_hdim96_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim96_fp16_sm80-791226771e2c8c97.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_bf16_sm80.cu" -o "/tmp/tmpxft_00092388_00000000-5_flash_fwd_hdim128_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092388_00000000-4_flash_fwd_hdim128_bf16_sm80.module_id" "/tmp/tmpxft_00092388_00000000-5_flash_fwd_hdim128_bf16_sm80.cpp4.ii" 
+  Compilation aborted.
+  # --error 0x1 --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim256_bf16_causal_sm80-18be8ecb7c0f7c73.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim256_bf16_causal_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_fp16_sm80.cu" -o "/tmp/tmpxft_00092390_00000000-5_flash_fwd_hdim224_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092390_00000000-4_flash_fwd_hdim224_fp16_sm80.module_id" "/tmp/tmpxft_00092390_00000000-5_flash_fwd_hdim224_fp16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim128_bf16_sm80.cu" -o "/tmp/tmpxft_00092388_00000000-7_flash_fwd_hdim128_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim128_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim128_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092388_00000000-3_flash_fwd_hdim128_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092388_00000000-4_flash_fwd_hdim128_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092388_00000000-7_flash_fwd_hdim128_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092388_00000000-6_flash_fwd_hdim128_bf16_sm80.ptx"
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_fp16_sm80.cu" -o "/tmp/tmpxft_00092390_00000000-7_flash_fwd_hdim224_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092390_00000000-3_flash_fwd_hdim224_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092390_00000000-4_flash_fwd_hdim224_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092390_00000000-7_flash_fwd_hdim224_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(318): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.ptx"  -o "/tmp/tmpxft_00091bc0_00000000-8_flash_fwd_hdim128_fp16_sm80.sm_80.cubin" 
+  <unnamed>: parse Explicit load/store type does not match pointee type of pointer operand (Producer: 'LLVM7.0.1' Reader: 'LLVM 7.0.1')
+  # --error 0x1 --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim128_bf16_sm80-f1ff254233809e96.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim128_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_bf16_sm80.cu" -o "/tmp/tmpxft_000923a5_00000000-5_flash_fwd_hdim160_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000923a5_00000000-4_flash_fwd_hdim160_bf16_sm80.module_id" "/tmp/tmpxft_000923a5_00000000-5_flash_fwd_hdim160_bf16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_bf16_sm80.cu" -o "/tmp/tmpxft_000923a5_00000000-7_flash_fwd_hdim160_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000923a5_00000000-3_flash_fwd_hdim160_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000923a5_00000000-4_flash_fwd_hdim160_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000923a5_00000000-7_flash_fwd_hdim160_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.ptx"
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.ptx"  -o "/tmp/tmpxft_000922e1_00000000-8_flash_fwd_hdim64_bf16_causal_sm80.sm_80.cubin" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_00091bc0_00000000-8_flash_fwd_hdim128_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_00091bc0_00000000-3_flash_fwd_hdim128_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_00091bc0_00000000-3_flash_fwd_hdim128_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_00091bc0_00000000-6_flash_fwd_hdim128_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim128_fp16_sm80-759fdfecd1f0ed1c.o" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000922e1_00000000-8_flash_fwd_hdim64_bf16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000922e1_00000000-3_flash_fwd_hdim64_bf16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000922e1_00000000-3_flash_fwd_hdim64_bf16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000922e1_00000000-6_flash_fwd_hdim64_bf16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim64_bf16_causal_sm80-c63b3fa1a02f2216.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000923ed_00000000-5_flash_fwd_hdim96_bf16_causal_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000923ed_00000000-4_flash_fwd_hdim96_bf16_causal_sm80.module_id" "/tmp/tmpxft_000923ed_00000000-5_flash_fwd_hdim96_bf16_causal_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_fp16_sm80.cu" -o "/tmp/tmpxft_000923f6_00000000-5_flash_fwd_hdim160_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000923f6_00000000-4_flash_fwd_hdim160_fp16_sm80.module_id" "/tmp/tmpxft_000923f6_00000000-5_flash_fwd_hdim160_fp16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" -o "/tmp/tmpxft_000923ed_00000000-7_flash_fwd_hdim96_bf16_causal_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim96_bf16_causal_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000923ed_00000000-3_flash_fwd_hdim96_bf16_causal_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000923ed_00000000-4_flash_fwd_hdim96_bf16_causal_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.gpu"  "/tmp/tmpxft_000923ed_00000000-7_flash_fwd_hdim96_bf16_causal_sm80.cpp1.ii" -o "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.ptx"
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim160_fp16_sm80.cu" -o "/tmp/tmpxft_000923f6_00000000-7_flash_fwd_hdim160_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim160_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim160_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000923f6_00000000-3_flash_fwd_hdim160_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000923f6_00000000-4_flash_fwd_hdim160_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000923f6_00000000-7_flash_fwd_hdim160_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_000923f6_00000000-6_flash_fwd_hdim160_fp16_sm80.ptx"
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.ptx"  -o "/tmp/tmpxft_00092375_00000000-8_flash_fwd_hdim64_fp16_causal_sm80.sm_80.cubin" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.ptx"  -o "/tmp/tmpxft_00092313_00000000-8_flash_fwd_hdim256_fp16_causal_sm80.sm_80.cubin" 
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim160_fp16_sm80-17db6cdd19f7f98b.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim160_fp16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_fp16_sm80.cu" -o "/tmp/tmpxft_0009240c_00000000-5_flash_fwd_hdim192_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_0009240c_00000000-4_flash_fwd_hdim192_fp16_sm80.module_id" "/tmp/tmpxft_0009240c_00000000-5_flash_fwd_hdim192_fp16_sm80.cpp4.ii" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_00092375_00000000-8_flash_fwd_hdim64_fp16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_00092375_00000000-3_flash_fwd_hdim64_fp16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_00092375_00000000-3_flash_fwd_hdim64_fp16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_00092375_00000000-6_flash_fwd_hdim64_fp16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim64_fp16_causal_sm80-be3ad2732c9cc075.o" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_fp16_sm80.cu" -o "/tmp/tmpxft_0009240c_00000000-7_flash_fwd_hdim192_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_0009240c_00000000-3_flash_fwd_hdim192_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_0009240c_00000000-4_flash_fwd_hdim192_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_0009240c_00000000-7_flash_fwd_hdim192_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.ptx"
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_fp16_sm80.cu" -o "/tmp/tmpxft_0009241f_00000000-5_flash_fwd_hdim32_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_0009241f_00000000-4_flash_fwd_hdim32_fp16_sm80.module_id" "/tmp/tmpxft_0009241f_00000000-5_flash_fwd_hdim32_fp16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_fp16_sm80.cu" -o "/tmp/tmpxft_0009241f_00000000-7_flash_fwd_hdim32_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_0009241f_00000000-3_flash_fwd_hdim32_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_0009241f_00000000-4_flash_fwd_hdim32_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_0009241f_00000000-7_flash_fwd_hdim32_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.ptx"
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_00092313_00000000-8_flash_fwd_hdim256_fp16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_00092313_00000000-3_flash_fwd_hdim256_fp16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_00092313_00000000-3_flash_fwd_hdim256_fp16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_00092313_00000000-6_flash_fwd_hdim256_fp16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim256_fp16_causal_sm80-4f3276a511b2dc9b.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_fp16_sm80.cu" -o "/tmp/tmpxft_00092460_00000000-5_flash_fwd_hdim256_fp16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092460_00000000-4_flash_fwd_hdim256_fp16_sm80.module_id" "/tmp/tmpxft_00092460_00000000-5_flash_fwd_hdim256_fp16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_fp16_sm80.cu" -o "/tmp/tmpxft_00092460_00000000-7_flash_fwd_hdim256_fp16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092460_00000000-3_flash_fwd_hdim256_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092460_00000000-4_flash_fwd_hdim256_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092460_00000000-7_flash_fwd_hdim256_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(347): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.ptx"  -o "/tmp/tmpxft_000923ed_00000000-8_flash_fwd_hdim96_bf16_causal_sm80.sm_80.cubin" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.ptx"  -o "/tmp/tmpxft_00092390_00000000-8_flash_fwd_hdim224_fp16_sm80.sm_80.cubin" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.ptx"  -o "/tmp/tmpxft_000923a5_00000000-8_flash_fwd_hdim160_bf16_sm80.sm_80.cubin" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000923ed_00000000-8_flash_fwd_hdim96_bf16_causal_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000923ed_00000000-3_flash_fwd_hdim96_bf16_causal_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000923ed_00000000-3_flash_fwd_hdim96_bf16_causal_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000923ed_00000000-6_flash_fwd_hdim96_bf16_causal_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim96_bf16_causal_sm80-800cc4806a424737.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_bf16_sm80.cu" -o "/tmp/tmpxft_000924ab_00000000-5_flash_fwd_hdim224_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000924ab_00000000-4_flash_fwd_hdim224_bf16_sm80.module_id" "/tmp/tmpxft_000924ab_00000000-5_flash_fwd_hdim224_bf16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim224_bf16_sm80.cu" -o "/tmp/tmpxft_000924ab_00000000-7_flash_fwd_hdim224_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim224_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim224_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000924ab_00000000-3_flash_fwd_hdim224_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000924ab_00000000-4_flash_fwd_hdim224_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000924ab_00000000-7_flash_fwd_hdim224_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_000924ab_00000000-6_flash_fwd_hdim224_bf16_sm80.ptx"
+  kernels/flash_fwd_launch_template.h(318): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.ptx"  -o "/tmp/tmpxft_0009240c_00000000-8_flash_fwd_hdim192_fp16_sm80.sm_80.cubin" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_00092390_00000000-8_flash_fwd_hdim224_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_00092390_00000000-3_flash_fwd_hdim224_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_00092390_00000000-3_flash_fwd_hdim224_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_00092390_00000000-6_flash_fwd_hdim224_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim224_fp16_sm80-54d101fd022eab36.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_bf16_sm80.cu" -o "/tmp/tmpxft_000924c2_00000000-5_flash_fwd_hdim192_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_000924c2_00000000-4_flash_fwd_hdim192_bf16_sm80.module_id" "/tmp/tmpxft_000924c2_00000000-5_flash_fwd_hdim192_bf16_sm80.cpp4.ii" 
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.ptx"  -o "/tmp/tmpxft_0009241f_00000000-8_flash_fwd_hdim32_fp16_sm80.sm_80.cubin" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim192_bf16_sm80.cu" -o "/tmp/tmpxft_000924c2_00000000-7_flash_fwd_hdim192_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim192_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim192_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_000924c2_00000000-3_flash_fwd_hdim192_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_000924c2_00000000-4_flash_fwd_hdim192_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_000924c2_00000000-7_flash_fwd_hdim192_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_000924c2_00000000-6_flash_fwd_hdim192_bf16_sm80.ptx"
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_000923a5_00000000-8_flash_fwd_hdim160_bf16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_000923a5_00000000-3_flash_fwd_hdim160_bf16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_000923a5_00000000-3_flash_fwd_hdim160_bf16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_000923a5_00000000-6_flash_fwd_hdim160_bf16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim160_bf16_sm80-b8e226bc00ecbaf1.o" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_0009240c_00000000-8_flash_fwd_hdim192_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_0009240c_00000000-3_flash_fwd_hdim192_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_0009240c_00000000-3_flash_fwd_hdim192_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_0009240c_00000000-6_flash_fwd_hdim192_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim192_fp16_sm80-3981fe996a7e8814.o" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_fp16_sm80.cu" -o "/tmp/tmpxft_0009250a_00000000-5_flash_fwd_hdim64_fp16_sm80.cpp4.ii" 
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim192_bf16_sm80-f7453c8601d43b17.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim192_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_bf16_sm80.cu" -o "/tmp/tmpxft_00092510_00000000-5_flash_fwd_hdim32_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_0009250a_00000000-4_flash_fwd_hdim64_fp16_sm80.module_id" "/tmp/tmpxft_0009250a_00000000-5_flash_fwd_hdim64_fp16_sm80.cpp4.ii" 
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_bf16_sm80.cu" -o "/tmp/tmpxft_00092517_00000000-5_flash_fwd_hdim256_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092510_00000000-4_flash_fwd_hdim32_bf16_sm80.module_id" "/tmp/tmpxft_00092510_00000000-5_flash_fwd_hdim32_bf16_sm80.cpp4.ii" 
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092517_00000000-4_flash_fwd_hdim256_bf16_sm80.module_id" "/tmp/tmpxft_00092517_00000000-5_flash_fwd_hdim256_bf16_sm80.cpp4.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_fp16_sm80.cu" -o "/tmp/tmpxft_0009250a_00000000-7_flash_fwd_hdim64_fp16_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim32_bf16_sm80.cu" -o "/tmp/tmpxft_00092510_00000000-7_flash_fwd_hdim32_bf16_sm80.cpp1.ii" 
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim256_bf16_sm80.cu" -o "/tmp/tmpxft_00092517_00000000-7_flash_fwd_hdim256_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_fp16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_fp16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_0009250a_00000000-3_flash_fwd_hdim64_fp16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_0009250a_00000000-4_flash_fwd_hdim64_fp16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.cudafe1.gpu"  "/tmp/tmpxft_0009250a_00000000-7_flash_fwd_hdim64_fp16_sm80.cpp1.ii" -o "/tmp/tmpxft_0009250a_00000000-6_flash_fwd_hdim64_fp16_sm80.ptx"
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim32_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim32_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092510_00000000-3_flash_fwd_hdim32_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092510_00000000-4_flash_fwd_hdim32_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092510_00000000-7_flash_fwd_hdim32_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092510_00000000-6_flash_fwd_hdim32_bf16_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim64_fp16_sm80-a93563dad84e2972.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim64_fp16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ _NVVM_BRANCH_=nvvm
+  #$ _SPACE_= 
+  #$ _CUDART_=cudart
+  #$ _HERE_=/usr/local/cuda/bin
+  #$ _THERE_=/usr/local/cuda/bin
+  #$ _TARGET_SIZE_=
+  #$ _TARGET_DIR_=
+  #$ _TARGET_DIR_=targets/x86_64-linux
+  #$ TOP=/usr/local/cuda/bin/..
+  #$ CICC_PATH=/usr/local/cuda/bin/../nvvm/bin
+  #$ NVVMIR_LIBRARY_DIR=/usr/local/cuda/bin/../nvvm/libdevice
+  #$ LD_LIBRARY_PATH=/usr/local/cuda/bin/../lib:/home/pro/code/lls/test-flash-attn/target/release/deps:/home/pro/code/lls/test-flash-attn/target/release:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib:/home/pro/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib:/usr/lib/x86_64-linux-gnu/nvidia/current
+  #$ PATH=/usr/local/cuda/bin/../nvvm/bin:/usr/local/cuda/bin:/home/pro/.nvm/versions/node/v22.8.0/bin:/home/pro/.cargo/bin:/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/snap/bin
+  #$ INCLUDES="-I/usr/local/cuda/bin/../targets/x86_64-linux/include"  
+  #$ LIBRARIES=  "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib/stubs" "-L/usr/local/cuda/bin/../targets/x86_64-linux/lib"
+  #$ CUDAFE_FLAGS=
+  #$ PTXAS_FLAGS=
+  #$ gcc -std=c++17 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++ -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_bf16_sm80.cu" -o "/tmp/tmpxft_00092530_00000000-5_flash_fwd_hdim64_bf16_sm80.cpp4.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim256_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim256_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092517_00000000-3_flash_fwd_hdim256_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092517_00000000-4_flash_fwd_hdim256_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092517_00000000-7_flash_fwd_hdim256_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092517_00000000-6_flash_fwd_hdim256_bf16_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim224_bf16_sm80-9b2b93dbac21043c.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim224_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ cudafe++ --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr  --m64 --parse_templates --gen_c_file_name "/tmp/tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.cudafe1.cpp" --stub_file_name "tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.cudafe1.stub.c" --gen_module_id_file --module_id_file_name "/tmp/tmpxft_00092530_00000000-4_flash_fwd_hdim64_bf16_sm80.module_id" "/tmp/tmpxft_00092530_00000000-5_flash_fwd_hdim64_bf16_sm80.cpp4.ii" 
+  kernels/flash_fwd_launch_template.h(347): warning #177-D: variable "__err" was declared but never referenced
+          do { const cudaError_t __err = status_; } while (0);
+                                 ^
+
+  Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -E -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -D__CUDACC__ -D__NVCC__ -D__CUDACC_EXTENDED_LAMBDA__ -D__CUDACC_RELAXED_CONSTEXPR__  -fPIC -O3 -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"    -U "__CUDA_NO_HALF_OPERATORS__" -U "__CUDA_NO_HALF_CONVERSIONS__" -U "__CUDA_NO_HALF2_OPERATORS__" -U "__CUDA_NO_BFLOAT16_CONVERSIONS__" -D__CUDACC_VER_MAJOR__=12 -D__CUDACC_VER_MINOR__=6 -D__CUDACC_VER_BUILD__=85 -D__CUDA_API_VER_MAJOR__=12 -D__CUDA_API_VER_MINOR__=6 -DCUDA_API_PER_THREAD_DEFAULT_STREAM=1 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -include "cuda_runtime.h" -m64 "kernels/flash_fwd_hdim64_bf16_sm80.cu" -o "/tmp/tmpxft_00092530_00000000-7_flash_fwd_hdim64_bf16_sm80.cpp1.ii" 
+  #$ "$CICC_PATH/cicc" --c++17 --gnu_version=120200 --display_error_number --orig_src_file_name "kernels/flash_fwd_hdim64_bf16_sm80.cu" --orig_src_path_name "/home/pro/.cargo/git/checkouts/candle-2422c2b1670562f7/015eaa0/candle-flash-attn/kernels/flash_fwd_hdim64_bf16_sm80.cu" --allow_managed --extended-lambda --relaxed_constexpr   -arch compute_80 -m64 --no-version-ident -ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 -fast-math --gen_div_approx_ftz --include_file_name "tmpxft_00092530_00000000-3_flash_fwd_hdim64_bf16_sm80.fatbin.c" -tused --module_id_file_name "/tmp/tmpxft_00092530_00000000-4_flash_fwd_hdim64_bf16_sm80.module_id" --gen_c_file_name "/tmp/tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.cudafe1.c" --stub_file_name "/tmp/tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.cudafe1.stub.c" --gen_device_file_name "/tmp/tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.cudafe1.gpu"  "/tmp/tmpxft_00092530_00000000-7_flash_fwd_hdim64_bf16_sm80.cpp1.ii" -o "/tmp/tmpxft_00092530_00000000-6_flash_fwd_hdim64_bf16_sm80.ptx"
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim32_bf16_sm80-aca7d8fdce93ef53.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim32_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  Segmentation fault
+  # --error 0x8b --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim64_bf16_sm80-eaa7ce7f57eb7351.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim64_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_0009241f_00000000-8_flash_fwd_hdim32_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_0009241f_00000000-3_flash_fwd_hdim32_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_0009241f_00000000-3_flash_fwd_hdim32_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_0009241f_00000000-6_flash_fwd_hdim32_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim32_fp16_sm80-3a7585e74a278dc3.o" 
+  # --error 0x1 --
+
+  thread '<unnamed>' panicked at /home/pro/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bindgen_cuda-0.1.5/src/lib.rs:262:21:
+  nvcc error while executing compiling: "nvcc" "--gpu-architecture=sm_80" "-c" "-o" "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim256_bf16_sm80-21dd0f7dd998e506.o" "--default-stream" "per-thread" "-std=c++17" "-O3" "-U__CUDA_NO_HALF_OPERATORS__" "-U__CUDA_NO_HALF_CONVERSIONS__" "-U__CUDA_NO_HALF2_OPERATORS__" "-U__CUDA_NO_BFLOAT16_CONVERSIONS__" "-Icutlass/include" "--expt-relaxed-constexpr" "--expt-extended-lambda" "--use_fast_math" "--verbose" "-Xcompiler" "-fPIC" "kernels/flash_fwd_hdim256_bf16_sm80.cu"
+
+  # stdout
+
+
+  # stderr
+
+  #$ ptxas -arch=sm_80 -m64  "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.ptx"  -o "/tmp/tmpxft_00092460_00000000-8_flash_fwd_hdim256_fp16_sm80.sm_80.cubin" 
+  #$ fatbinary -64 --cicc-cmdline="-ftz=1 -prec_div=0 -prec_sqrt=0 -fmad=1 " "--image3=kind=elf,sm=80,file=/tmp/tmpxft_00092460_00000000-8_flash_fwd_hdim256_fp16_sm80.sm_80.cubin" "--image3=kind=ptx,sm=80,file=/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.ptx" --embedded-fatbin="/tmp/tmpxft_00092460_00000000-3_flash_fwd_hdim256_fp16_sm80.fatbin.c" 
+  #$ rm /tmp/tmpxft_00092460_00000000-3_flash_fwd_hdim256_fp16_sm80.fatbin
+  #$ gcc -std=c++17 -D__CUDA_ARCH__=800 -D__CUDA_ARCH_LIST__=800 -D__NV_LEGACY_LAUNCH -c -x c++  -DCUDA_DOUBLE_MATH_FUNCTIONS -fPIC -O3 -Wno-psabi -I"cutlass/include" "-I/usr/local/cuda/bin/../targets/x86_64-linux/include"   -m64 "/tmp/tmpxft_00092460_00000000-6_flash_fwd_hdim256_fp16_sm80.cudafe1.cpp" -o "/home/pro/code/lls/test-flash-attn/target/release/build/candle-flash-attn-dcdb39c0ff7631b4/out/flash_fwd_hdim256_fp16_sm80-6bbb415157454ca9.o" 
